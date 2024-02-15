@@ -114,9 +114,8 @@ def menu():
 
 
 def main():
-    while True:
+        
         menu()
-
         op1()
 
 if __name__ == "__main__":
