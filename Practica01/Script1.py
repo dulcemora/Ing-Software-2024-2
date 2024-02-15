@@ -54,12 +54,19 @@ def set():
     while abs(juegosJug1 - juegosJug2) < 2:
         while puntosJug1 != 'game' or puntosJug2 != 'game':
         #while puntosJug1 != 'game' or puntosJug2 != 'game' or (juegosJug1 < 6 or juegosJug2 < 6):    
-            if random.randint(0, 1) == 0:
-                puntosJug1 = cuentaPuntos(puntosJug1, puntosJug2)
-                print(jug1, " gana puntos. Puntos al momento:", puntosJug1)
-            else:
-                puntosJug2 = cuentaPuntos(puntosJug2, puntosJug1)
-                print(jug2, " gana puntos. Puntos al momento:", puntosJug2)
+
+            try:
+                seleccion = int(input("¿Que jugador desea que gane? (1 o 2): "))
+                if seleccion == 1:
+                    puntosJug1 = cuentaPuntos(puntosJug1, puntosJug2)
+                    print(jug1, " gana puntos. Puntos al momento:", puntosJug1)
+                elif seleccion == 2:
+                    puntosJug2 = cuentaPuntos(puntosJug2, puntosJug1)
+                    print(jug2, " gana puntos. Puntos al momento:", puntosJug2)
+                else:
+                    print("No ingreso un numero valido")
+            except:
+                print("Ingrese un numero, por favor")
 
         # Verificar quién gana el juego
         if puntosJug1 == 'game':
