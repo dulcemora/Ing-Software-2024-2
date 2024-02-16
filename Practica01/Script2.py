@@ -65,22 +65,34 @@ class ArbolBinarioOrdenado:
                 self.agregaElem(contenido, nodo.der)
 
     def preorden(raiz):
+        aux = []
+
         if raiz != None:
-            print(raiz.contenido)
+            aux.insert(raiz.contenido)
             preorden(raiz.izq)
             preorden(raiz.der)             
+    
+        return aux
 
     def inorden(raiz):
+        aux = []
+
         if raiz != None:
             inorden(raiz.izq)
-            print(raiz.contenido)
-            inorden(raiz.der)             
+            aux.insert(raiz.contenido)
+            inorden(raiz.der)    
+
+        return aux         
 
     def postorden(raiz):
+        aux = []
+
         if raiz != None:
-            postorden(raiz.der)
             postorden(raiz.izq)
-            print(raiz.contenido)             
+            postorden(raiz.der)
+            aux.insert(raiz.contenido)             
+
+        return aux
 
 
 def menu():
@@ -154,7 +166,8 @@ def main():
         if seleccion == "1":
             op1()
         elif seleccion == "2":
-            op2()
+            print("Arbol Binario implementado en codigo")
+#            op2()
         elif seleccion == "3":
             print("Escogio Salir, vuelva pronto!")
             break
