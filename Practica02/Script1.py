@@ -12,6 +12,7 @@ if __name__ == '__main__':
         print("Error ", e)
 
 #Funcion 1
+#funcion 1.1
 def registraUsuario(nombre, password, email, profilePicture=None, superUser=False):
     cursor = connection.cursor()
     try:
@@ -22,6 +23,8 @@ def registraUsuario(nombre, password, email, profilePicture=None, superUser=Fals
         print("Error ", e)
     finally:
         cursor.close()
+
+#funcion 1.2
 def registraPelicula(nombre, genero, duracion, inventario):
     cursor = connection.cursor()
     try:
@@ -33,6 +36,7 @@ def registraPelicula(nombre, genero, duracion, inventario):
     finally:
         cursor.close()
 
+#funcion 1.3
 def registraRenta(idUsuario, idPelicula, fecha_renta, dias_de_renta, estatus=0):
     cursor = connection.cursor()
     try:
@@ -50,13 +54,13 @@ def filtraUsuario(apellido):
 
     try:
         consulta = "SELECT * FROM usuario WHERE apellido LIKE %s"
-        apellido_param = f"%{apellido}"
-        cursor.execute(consulta, (apellido_param,))
+        apellido = f"%{apellido}"
+        cursor.execute(consulta, (apellido,))
 
         resultados = cursor.fetchall()
 
         if resultados:
-            print("Usuarios encontrados:")
+            print("Usuarios:")
             for usuario in resultados:
                 print(usuario)
         else:
@@ -71,11 +75,11 @@ def filtraUsuario(apellido):
             connection.close()
 
 #Funcion 3
-def cambiaGeneroPelicula(nombre_pelicula, nuevo_genero):
+def cambiaGeneroPelicula(nombre, nuevoGenero):
     cursor = connection.cursor()
     try:
         consulta = "UPDATE peliculas SET genero = %s WHERE nombre = %s"
-        cursor.execute(consulta, (nuevo_genero, nombre_pelicula))
+        cursor.execute(consulta, (nuevoGenero, nombre))
 
         if cursor.rowcount > 0:
             print("Se cambio el genero")
@@ -93,7 +97,7 @@ def cambiaGeneroPelicula(nombre_pelicula, nuevo_genero):
             connection.close()
 
 #Funcion 4
-def eliminar_rentas_antiguas():
+def eliminarRenta():
     cursor = connection.cursor()
 
     try:
@@ -101,11 +105,7 @@ def eliminar_rentas_antiguas():
 
         consulta = "DELETE FROM rentas WHERE fecha_renta < %s"
         cursor.execute(consulta, (fecha_limite,))
-
         connection.commit()
-
-        num_filas_afectadas = cursor.rowcount
-        print(f"Se han eliminado {num_filas_afectadas} rentas antiguas.")
 
     except pymysql.Error as e:
         print("Error ", e)

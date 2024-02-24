@@ -1,5 +1,5 @@
 from alchemyClasses import db
-from flask import Column, Integer, ForeignKey, DateTime, Boolean
+from sqlalchemy import Column, Integer, ForeignKey, DateTime, Boolean
 from datetime import date
 
 class Rentar(db.Model):
