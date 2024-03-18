@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Usuario</title>
+</head>
+<body>
+    <h2>Actualizar Usuario</h2>
+    <form action="/actualizar_usuario" method="post">
+        <label for="idUsuario">ID de Usuario:</label>
+        <input type="text" id="idUsuario" name="idUsuario"><br>
+        <label for="campoActualizar">Campo a Actualizar:</label>
+        <select id="campoActualizar" name="campoActualizar">
+            <option value="nombre">Nombre</option>
+            <option value="apPat">Apellido Paterno</option>
+            <option value="apMat">Apellido Materno</option>
+            <option value="password">Password</option>
+            <option value="email">Email</option>
+        </select><br>
+        <label for="nuevoValor">Nuevo Valor:</label>
+        <input type="text" id="nuevoValor" name="nuevoValor"><br>
+        <button type="submit">Actualizar Usuario</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar Pelicula</title>
+</head>
+<body>
+    <h1>Borrar Pelicula</h1>
+    <form method="post">
+    <label for="idPelicula">Ingrese el ID:</label>
+    <input type="text" name="idPelicula" id="idPelicula"/>
+    <br>
+    <button>Eliminar Pelicula</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
