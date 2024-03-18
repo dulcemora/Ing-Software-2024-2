@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar Usuario</title>
+</head>
+<!--
+<body>
+    <h1>Borrar Usuario</h1>
+    <form action="/borrar_usuario" method="POST">
+        <label for="idUsuario">Ingrese el ID del usuario:</label>
+        <input type="text" id="idUsuario" name="idUsuario">
+        <button type="submit">Eliminar Usuario</button>
+    </form>
+</body>
+-->
+<body>
+    <h1>Borrar Usuario</h1>
+    <form method="post">
+    <label for="idUsuario">Ingrese el ID:</label>
+    <input type="text" idUsuario="idUsuario" id="idUsuario"/>
+    <br>
+    <button>Eliminar usuario</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
