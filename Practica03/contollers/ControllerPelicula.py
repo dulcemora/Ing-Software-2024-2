@@ -3,42 +3,50 @@ from random import randint
 
 pelicula_blueprint = Blueprint('pelicula', __name__, url_prefix='/pelicula')
 
-@pelicula_blueprint.route('/') #localhost:5000/usuario/
-def ver_usuarios():
-    return "select * from usuario"
+@pelicula_blueprint.route('/', methods=['GET'])
+def raizpelicula():
+    return render_template('Pelicula/raizpelicula.html')
 
-#responde a localhost:5000/usuario/id/1
-@usuario_blueprint.route('/id/<int:id_usuario>/<string:nombre>') #<tipo:nombre_variable>
-def ver_usuario_id(id_usuario, nombre):
-    return f"Se hace el query con el id {id_usuario} y el nombre {nombre}"
+@pelicula_blueprint.route('/ver_peliculas', methods=['GET'])
+def ver_peliculas():
+    peliculas = Pelicula.query.all()
 
+    for pelicula in peliculas:
+        print(f"ID: {pelicula.idUsuario}, Nombre: {pelicula.nombre}, Email: {pelicula.email}")
+    return render_template('Pelicula/ver_peliculas.html', peliculas=peliculas)
 
-@usuario_blueprint.route('/agregar', methods=['GET', 'POST'])
+'''
+@pelicula_blueprint.route('/agregar_pelicula', methods=['GET', 'POST'])
 def agregar_usuario():
     if request.method == 'GET':
-        return render_template('Usuario/add_user.html')
+        return render_template('Usuario/agregar_usuario.html')
     else:
-        #Obtengo la información del método post.
-        name = request.form['name']
-        ap_pat = request.form['ap_pat']
-        ap_mat = request.form['ap_mat']
-        num_cta = request.form['num_cta']
-        passwd = request.form['passwd']
+        nombre = request.form['name']
+        password = request.form['password']
+        email = request.form['email']
+        # Puedes manejar otros campos como la imagen de perfil y si es superusuario aquí
+        nuevo_usuario = Usuario(nombre=nombre, password=password, email=email)
+        db.session.add(nuevo_usuario)
+        db.session.commit()
+        flash('Usuario agregado correctamente', 'success')
+        return "Usuario agregado"
+        #return redirect(url_for('usuario.ver_usuarios'))
 
-        #Creo la pelicula.
-#pelicula = Pelicula(name, ap_pat, ap_mat, num_cta, passwd)
-
- #       db.session.add(pelicula)
-  #      db.session.commit()
-
-   #     flash('Usuario creado exitosamente', 'success')
-
-#        return redirect(url_for('inicio'))
-    #    return url_for('inicio')
-
-        v = randint(0, 2)
-        if v == 1:
-            flash("Hello from flash!")
-            return url_for('usuario.agregar_usuario')
-        # Y regreso al flujo que me hayan especificado.
-        return render_template('Usuario/user_added.html', name=name, num_cta=num_cta)
+@usuario_blueprint.route('/borrar_usuario', methods=['GET', 'POST'])
+def borrar_usuario():
+    if request.method == 'GET':
+        return render_template('Usuario/borrar_usuario.html')
+    else:
+        idUsuario = request.form['idUsuario']
+        # Puedes manejar otros campos como la imagen de perfil y si es superusuario aquí
+        usuario_a_eliminar = Usuario.query.get_or_404(idUsuario)
+        #nuevo_usuario = Usuario(nombre=nombre, password=password, email=email)
+        if usuario_a_eliminar:
+            db.session.delete(usuario_a_eliminar)
+            db.session.commit()
+            return 'Usuario eliminado'
+        else:
+            return 'Usuario no encontrado', 404
+        flash('Usuario eliminado correctamente', 'success')
+        return render_template('Usuario/borrar_usuario.html')
+'''
