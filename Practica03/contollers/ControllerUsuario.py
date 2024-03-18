@@ -62,20 +62,23 @@ def borrar_usuario():
         else:
             return 'Usuario no encontrado'
 
-'''
-@usuario_blueprint.route('/actualizar_usuario', methods=['POST'])
-def actualizar_usuario():
-    id_usuario = request.form['idUsuario']
-    actualiza = request.form['campoActualizar']
-    nuevo_valor = request.form['nuevoValor']
-    cursor = db.cursor()
 
-#    try:
-    sql = f"UPDATE usuarios SET {actualiza} = %s WHERE id = %s"
-    cursor.execute(sql, (nuevo_valor, id_usuario))
-    db.session.commit()
-#        mensaje = f"{actualiza.capitalize()} del usuario con ID {id_usuario} actualizado correctamente a '{nuevo_valor}'"
-#    except mysql.connector.Error as error:
-#        mensaje = f"Error al actualizar el campo del usuario: {error}"
+@usuario_blueprint.route('/actualizar_usuario', methods=['GET', 'POST'])
+def actualizar_usuario():
+    if request.method == 'POST':
+        id_usuario = int(request.form['idUsuario'])
+        actualiza = request.form['campoActualizar']
+        nuevo_valor = request.form['nuevoValor']
+
+        usuario = Usuario.query.get(id_usuario)
+        if usuario:
+            if hasattr(usuario, actualiza):  # Verifica si el atributo existe en el modelo Usuario
+                setattr(usuario, actualiza, nuevo_valor)
+                db.session.commit()
+                return render_template('Usuario/actualizar_usuario.html')
+                flash('Usuario actualizado correctamente', 'success')
+            else:
+                flash('No se puede actualizar el campo', 'error')
+        else:
+            flash('Usuario no encontrado', 'error')
     return render_template('Usuario/actualizar_usuario.html')
-'''
