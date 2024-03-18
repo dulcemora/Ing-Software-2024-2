@@ -12,16 +12,16 @@
         <div style="margin-top: 20px; margin-bottom: 20px;">
         <form action="{{ url_for('pelicula.agregar_pelicula') }}" method="POST">
             <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre"/>
+            <input type="text" name="nombre" id="nombre" required/>
             <br>
             <label for="genero">Genero:</label>
-            <input type="text" name="genero" id="genero"/>
+            <input type="text" name="genero" id="genero" required/>
             <br>
             <label for="duracion">Duracion:</label>
-            <input type="number" name="duracion" id="duracion"/>
+            <input type="number" name="duracion" id="duracion" required/>
             <br>
             <label for="inventario">Inventario:</label>
-            <input type="number" name="inventario" id="inventario"/>
+            <input type="number" name="inventario" id="inventario" required/>
             <br>
             <div style="margin: 0 auto; width: 200px;">
                 <button type="submit">Crear pelicula</button>

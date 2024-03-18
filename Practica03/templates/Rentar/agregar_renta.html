@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar renta</title>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Agregar renta</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <form action="{{ url_for('rentar.agregar_renta') }}" method="POST">
+                <label for="idUsuario">ID Usuario:</label>
+                <select id="idUsuario" name="idUsuario" required>
+                    {% for usuario in usuarios %}
+                    <option value="{{ usuario.idUsuario }}">{{ usuario.idUsuario }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <label for="idPelicula">ID Película:</label>
+                <select id="idPelicula" name="idPelicula" required>
+                    {% for pelicula in peliculas %}
+                    <option value="{{ pelicula.idPelicula }}">{{ pelicula.idPelicula }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <label for="fecha_renta">Fecha de Renta:</label>
+                <input type="date" id="fecha_renta" name="fecha_renta" required>
+                <label for="dias_de_renta">Dias de Renta:</label>
+                <input type="number" id="dias_de_renta" name="dias_de_renta" required>
+                <div style="margin: 0 auto; width: 200px;">
+                    <button type="submit">Agregar Renta</button>
+                </div>
+                </form>
+        </div>
+    </div>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
