@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .table-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+    table {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
 </head>
 <body>
-    <h1>Usuarios</h1>
-    <table>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Usuarios</h1>
+    </div>
+    <div class="table-container">
+    <table border="1">
+        <!--<table>-->
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>apPat</th>
-            <th>apMat</th>
-            <th>password</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Password</th>
             <th>Email</th>
-            <th>ProfilePicture</th>
+            <th>Profile Picture</th>
             <th>SuperUser</th>
         </tr>
         {% for usuario in usuarios %}
@@ -31,5 +52,6 @@
         </tr>
         {% endfor %}
     </table>
+    </div>
 </body>
 </html>

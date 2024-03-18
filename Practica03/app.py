@@ -16,7 +16,7 @@ app.register_blueprint(usuario_blueprint)
 app.register_blueprint(pelicula_blueprint)
 
 @app.route('/')
-def hello_world():  # put application's code here
+def hello_world():
     return render_template('index.html')
 
 if __name__ == '__main__':
