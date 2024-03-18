@@ -16,13 +16,21 @@
 </body>
 -->
 <body>
-    <h1>Borrar Usuario</h1>
-    <form method="post">
-    <label for="idUsuario">Ingrese el ID:</label>
-    <input type="text" name="idUsuario" id="idUsuario"/>
-    <br>
-    <button>Eliminar usuario</button>
-    </form>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Borrar Usuario</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+        <form method="post">
+        <label for="idUsuario">Ingrese el ID:</label>
+        <input type="text" name="idUsuario" id="idUsuario"/>
+        <br>
+            <div style="margin: 0 auto; width: 200px;">
+                <button>Eliminar usuario</button>
+            </div>
+        </form>
+        </div>
+    </div>
     {% if get_flashed_messages() %}
         {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>

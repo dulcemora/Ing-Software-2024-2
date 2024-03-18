@@ -5,32 +5,39 @@
     <title>Agregar usuario</title>
 </head>
 <body>
-    <h1>Agregar usuario</h1>
-    <!--<form method="post" action="{{ url_for('usuario.agregar_usuario') }}">-->
-    <form action="{{ url_for('usuario.agregar_usuario') }}" method="POST">
-        <label for="nombre">Ingrese el nombre:</label>
-        <input type="text" name="nombre" id="nombre"/>
-        <br>
-        <label for="apPat">Ingrese el apellido paterno:</label>
-        <input type="text" name="apPat" id="apPat"/>
-        <br>
-        <label for="apMat">Ingrese el apellido materno:</label>
-        <input type="text" name="apMat" id="apMat"/>
-        <br>
-        <label for="password">Ingrese la contraseña:</label>
-        <input type="text" name="password" id="password"/>
-        <br>
-        <label for="email">Ingrese el email:</label>
-        <input type="email" name="email" id="email"/>
-        <br>
-        <button type="submit">Agregar usuario</button>
-    </form>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Agregar usuario</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <form action="{{ url_for('usuario.agregar_usuario') }}" method="POST">
+                <label for="nombre">Ingrese el nombre:</label>
+                <input type="text" name="nombre" id="nombre"/>
+                <br>
+                <label for="apPat">Ingrese el apellido paterno:</label>
+                <input type="text" name="apPat" id="apPat"/>
+                <br>
+                <label for="apMat">Ingrese el apellido materno:</label>
+                <input type="text" name="apMat" id="apMat"/>
+                <br>
+                <label for="password">Ingrese la contraseña:</label>
+                <input type="text" name="password" id="password"/>
+                <br>
+                <label for="email">Ingrese el email:</label>
+                <input type="email" name="email" id="email"/>
+                <br>
+                <div style="margin: 0 auto; width: 200px;">
+                    <button type="submit">Agregar usuario</button>
+                </div>
+                </form>
+        </div>
+    </div>
     {% if get_flashed_messages() %}
         {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>
         {% endfor %}
     {% endif %}
 
-    <button onclick="window.location.href='/usuario'">Regresar</button>
+<!--    <button onclick="window.location.href='/usuario'">Regresar</button> -->
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Pelicula</title>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Actualizar Pelicula</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <form action="{{ url_for('pelicula.actualizar_pelicula') }}" method="post">
+            <label for="idPelicula">ID:</label>
+            <input type="text" id="idPelicula" name="idPelicula"><br>
+            <label for="campoActualizar">Campo a Actualizar:</label>
+            <select id="campoActualizar" name="campoActualizar">
+                <option value="nombre">Nombre</option>
+                <option value="apPat">Genero</option>
+                <option value="apMat">Duracion</option>
+                <option value="password">Inventario</option>
+            </select><br>
+            <label for="nuevoValor">Nuevo Valor:</label>
+            <input type="text" id="nuevoValor" name="nuevoValor"><br>
+                <div style="margin: 0 auto; width: 200px;">
+                    <button type="submit">Actualizar Pelicula</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

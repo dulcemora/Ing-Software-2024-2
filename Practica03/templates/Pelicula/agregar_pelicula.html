@@ -5,22 +5,30 @@
     <title>Agregar pelicula</title>
 </head>
 <body>
-    <h1>Agregar pelicula</h1>
-    <form action="{{ url_for('pelicula.agregar_pelicula') }}" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre"/>
-        <br>
-        <label for="genero">Genero:</label>
-        <input type="text" name="genero" id="genero"/>
-        <br>
-        <label for="duracion">Duracion:</label>
-        <input type="number" name="duracion" id="duracion"/>
-        <br>
-        <label for="inventario">Inventario:</label>
-        <input type="number" name="inventario" id="inventario"/>
-        <br>
-        <button type="submit">Crear pelicula</button>
-    </form>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Agregar pelicula</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+        <form action="{{ url_for('pelicula.agregar_pelicula') }}" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre"/>
+            <br>
+            <label for="genero">Genero:</label>
+            <input type="text" name="genero" id="genero"/>
+            <br>
+            <label for="duracion">Duracion:</label>
+            <input type="number" name="duracion" id="duracion"/>
+            <br>
+            <label for="inventario">Inventario:</label>
+            <input type="number" name="inventario" id="inventario"/>
+            <br>
+            <div style="margin: 0 auto; width: 200px;">
+                <button type="submit">Crear pelicula</button>
+            </div>
+        </form>
+        </div>
+    </div>
     {% if get_flashed_messages() %}
         {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>

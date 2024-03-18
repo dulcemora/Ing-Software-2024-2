@@ -6,13 +6,21 @@
     <title>Borrar Pelicula</title>
 </head>
 <body>
-    <h1>Borrar Pelicula</h1>
-    <form method="post">
-    <label for="idPelicula">Ingrese el ID:</label>
-    <input type="text" name="idPelicula" id="idPelicula"/>
-    <br>
-    <button>Eliminar Pelicula</button>
-    </form>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Borrar Pelicula</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+        <form method="post">
+            <label for="idPelicula">Ingrese el ID:</label>
+            <input type="text" name="idPelicula" id="idPelicula"/>
+            <br>
+            <div style="margin: 0 auto; width: 200px;">
+                <button>Eliminar Pelicula</button>
+            </div>
+        </form>
+        </div>
+    </div>
     {% if get_flashed_messages() %}
         {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>
