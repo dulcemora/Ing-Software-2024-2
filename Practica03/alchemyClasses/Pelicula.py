@@ -4,7 +4,7 @@ from alchemyClasses import db
 
 class Pelicula(db.Model):
 
-    __tablename__ = 'Pelicula'
+    __tablename__ = 'peliculas'
     idPelicula = Column(Integer, primary_key=True, autoincrement=True)
     nombre = Column(String(200), nullable=False)
     genero = Column(String(45), nullable=True)

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelicula</title>
+</head>
+<body>
+    <h1>Pelicula</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Duracion</th>
+            <th>Inventario</th>
+        </tr>
+        {% for pelicula in peliculas %}
+        <tr>
+            <td>{{ pelicula.idPelicula }}</td>
+            <td>{{ pelicula.nombre }}</td>
+            <td>{{ pelicula.genero }}</td>
+            <td>{{ pelicula.duracion }}</td>
+            <td>{{ pelicula.inventario }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -5,26 +5,27 @@
     <title>Agregar pelicula</title>
 </head>
 <body>
-    <h1>Crear un usuario</h1>
-    <form method="post">
-    <label for="name">Ingrese el nombre:</label>
-    <input type="text" name="name" id="name"/>
-    <br>
-    <label for="genero">Ingrese el genero:</label>
-    <input type="text" name="genero" id="genero"/>
-    <br>
-    <label for="duracion">Ingrese la duracion:</label>
-    <input type="text" name="duracion" id="duracion"/>
-    <br>
-    <label for="inventario">Ingrese el inventario:</label>
-    <input type="text" name="inventario" id="inventario" minlength="8" maxlength="8"/>
-    <br>
-    <button>Crear pelicula</button>
+    <h1>Agregar pelicula</h1>
+    <form action="{{ url_for('pelicula.agregar_pelicula') }}" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"/>
+        <br>
+        <label for="genero">Genero:</label>
+        <input type="text" name="genero" id="genero"/>
+        <br>
+        <label for="duracion">Duracion:</label>
+        <input type="number" name="duracion" id="duracion"/>
+        <br>
+        <label for="inventario">Inventario:</label>
+        <input type="number" name="inventario" id="inventario"/>
+        <br>
+        <button type="submit">Crear pelicula</button>
     </form>
     {% if get_flashed_messages() %}
         {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>
         {% endfor %}
     {% endif %}
+
 </body>
 </html>

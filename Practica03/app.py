@@ -21,5 +21,3 @@ def hello_world():  # put application's code here
 
 if __name__ == '__main__':
     app.run()
-
-#nuevo_usuario = Usuario(nombre=nombre, password=password, email=email)

@@ -75,10 +75,12 @@ def actualizar_usuario():
             if hasattr(usuario, actualiza):  # Verifica si el atributo existe en el modelo Usuario
                 setattr(usuario, actualiza, nuevo_valor)
                 db.session.commit()
-                return render_template('Usuario/actualizar_usuario.html')
+#                return render_template('Usuario/actualizar_usuario.html')
                 flash('Usuario actualizado correctamente', 'success')
+                return redirect(url_for('usuario.actualizar_usuario'))
             else:
                 flash('No se puede actualizar el campo', 'error')
         else:
             flash('Usuario no encontrado', 'error')
+
     return render_template('Usuario/actualizar_usuario.html')
