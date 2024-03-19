@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Renta</title>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 200px;">
+        <h1>Actualizar Renta</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <form action="/actualizar_renta/{{ renta.idRentar }}" method="POST">
+                    <label for="rentado_true">Rentado:</label>
+                    <input type="radio" id="rentado_true" name="rentado" value="True" {% if renta.rentado %} checked {% endif %}>
+                    <label for="rentado_true">True</label>
+                    <input type="radio" id="rentado_false" name="rentado" value="False" {% if not renta.rentado %} checked {% endif %}>
+                    <label for="rentado_false">False</label>
+                    <br>
+                <div style="margin: 0 auto; width: 200px;">
+                    <button type="submit">Actualizar Estatus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

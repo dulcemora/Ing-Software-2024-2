@@ -35,24 +35,18 @@ def agregar_renta():
     peliculas = Pelicula.query.all()
     return render_template('Rentar/agregar_renta.html', usuarios=usuarios, peliculas=peliculas)
 
-'''
-@pelicula_blueprint.route('/actualizar_pelicula', methods=['GET', 'POST'])
+@rentar_blueprint.route('/actualizar_pelicula', methods=['GET', 'POST'])
 def actualizar_pelicula():
     if request.method == 'POST':
-        id_pelicula = int(request.form['idPelicula'])
-        actualiza = request.form['campoActualizar']
-        nuevo_valor = request.form['nuevoValor']
+        id_rentar = int(request.form['idRentar'])
 
-        pelicula = Pelicula.query.get(id_pelicula)
-        if pelicula:
-            if hasattr(pelicula, actualiza):
-                setattr(pelicula, actualiza, nuevo_valor)
-                db.session.commit()
-                flash('Pelicula actualizado', 'success')
-                return render_template('Pelicula/actualizar_pelicula.html')
-            else:
-                flash('No se puede actualizar el campo', 'error')
-        else:
-            flash('Pelicula no encontrada', 'error')
-    return render_template('Pelicula/actualizar_pelicula.html')
-'''
+        renta = Rentar.query.get(id_rentar)
+
+        if request.method == 'POST':
+            nuevo_estado = request.form.get('rentado') == 'True'  # Convertimos el valor recibido a un booleano
+            renta.rentado = nuevo_estado
+            db.session.commit()
+            flash('Estatus actualizado', 'success')
+            return render_template('Rentar/actualizar_rentar.html')
+
+    return render_template('Rentar/actualizar_rentar.html')
