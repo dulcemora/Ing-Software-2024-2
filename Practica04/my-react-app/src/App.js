@@ -1,22 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+//import AgregarUsuario from './AgregarUsuario';
+//import BorrarUsuario from './BorrarUsuario';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Bienvenido a Clonbuster</h1>
+        <div style={{ margin: '0 auto', width: '200px', textAlign: 'center' }}>
+          <h1>Clonbuster</h1>
+          <div style={{ margin: '0 auto', width: '200px' }}>
+            <button onClick={() => window.location.href='/clientes'}>Clientes</button>
+            <button onClick={() => window.location.href='/peliculas'}>Peliculas</button>
+            <button onClick={() => window.location.href='/rentas'}>Rentar</button>
+          </div>
+        </div>
       </header>
     </div>
   );
