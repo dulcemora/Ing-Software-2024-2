@@ -1,29 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Ver_rentas from "./renta/ver_rentas";
-import Actualizar_renta from "./renta/actualizar_renta";
-import Agregar_renta from "./renta/agregar_renta";
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
+import "./rentas.css"; 
 
-function Rentas() {
-  return (
-    <div className="container">
-      <h1>Rentar</h1>
-      <div className="buttons">
-        <div className="button-group">
-          <Link to="renta/ver_rentas"><button>Ver todas las rentas</button></Link>
+const Rentas = () => {
+    return (
+        <div className="Rentas">
+            <h1>Rentas</h1>
+            <div className="rentas-nav">
+                <Link to="/rentas/ver_rentas">Ver renta</Link>
+                <Link to="/rentas/agregar_renta">Agregar renta</Link>
+                <Link to="/rentas/actualizar_renta">Actualizar renta</Link>
+                <Link to="/">Regresar</Link>
+            </div>
+            <Outlet />
         </div>
-        <div className="button-group">
-          <Link to="renta/actualizar_renta"><button>Actualizar renta</button></Link>
-        </div>
-        <div className="button-group">
-          <Link to="renta/agregar_renta"><button>Agregar renta</button></Link>
-        </div>
-        <div className="button-group">
-          <Link to="/"><button>Regresar</button></Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+    );
+};
 
 export default Rentas;

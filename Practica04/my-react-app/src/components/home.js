@@ -1,7 +1,12 @@
 import React from "react";
-
-function Home() {
-    return <h1>¡Bienvenido a Clonbuster!</h1>;
-}
+ 
+const Home = () => {
+    return (
+        <div className="Page">
+            <h1>¡Bienvenido a Clonbuster!</h1>
+        </div>
+    );
+};
+ 
 
 export default Home;
