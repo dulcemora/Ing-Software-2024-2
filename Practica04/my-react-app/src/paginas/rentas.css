@@ -1,4 +1,4 @@
-/* Styling for the rentas component nav element */
+/* El estilo para el componente de rentas */
 .rentas-nav {
     background: #f2f2f2;
     height: 4vh;
@@ -8,7 +8,7 @@
     border-bottom: 2px solid blue;
 }
  
-/* Styling for rentas-nav component nav element anchor tag*/
+/* El estilo para el componente de rentas-nav */
 .rentas-nav a {
     padding: 20px 20px;
     font-size: 26px;
@@ -18,12 +18,12 @@
     color: darkgrey;
 }
  
-/* Styling for rentas component course-nav div anchor tag */
+/* El estilo para el componente de rentas-nav */
 .rentas-nav a {
     color: rgb(59, 117, 241);
 }
  
-/* Styling for the Rentas component main div */
+/* El estilo para el componente de rentas main */
 .Rentas {
     width: 100%;
     height: 96vh;
