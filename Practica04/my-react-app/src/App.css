@@ -12,7 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/*
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +35,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+*/
+.App-header {
+  background-color: #333; /* Color de fondo del navbar */
+  list-style-type: none; /* Quita los estilos de lista */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.App-header li {
+  float: left; /* Alinea los elementos de la lista en línea */
+}
+
+.App-header li a {
+  display: block;
+  color: white; /* Color del texto */
+  text-align: center;
+  padding: 14px 16px; /* Espacio interior */
+  text-decoration: none;
+}
+
+/* Cambia el color del enlace cuando se pasa el mouse */
+.App-header li a:hover {
+  background-color: #111;
 }
