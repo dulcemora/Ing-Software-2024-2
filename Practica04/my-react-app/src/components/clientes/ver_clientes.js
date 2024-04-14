@@ -1,9 +1,6 @@
-// Archivo: ver_clientes.js
-
 import React from 'react';
-import './ver_clientes.css';
 
-function VerClientes({ clientes }) {
+function Ver_clientes({ clientes }) {
   return (
     <div className="container">
       <h1>Clientes</h1>
@@ -41,4 +38,4 @@ function VerClientes({ clientes }) {
   );
 }
 
-export default VerClientes;
+export default Ver_clientes;

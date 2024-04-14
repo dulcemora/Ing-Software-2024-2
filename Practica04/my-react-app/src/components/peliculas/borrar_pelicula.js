@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './borrar_pelicula.css';
 
-function borrar_pelicula() {
+function Borrar_pelicula() {
   const [idPelicula, setIdPelicula] = useState('');
 
   const handleInputChange = (event) => {
@@ -36,4 +35,4 @@ function borrar_pelicula() {
   );
 }
 
-export default borrar_pelicula;
+export default Borrar_pelicula;

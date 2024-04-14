@@ -1,7 +1,6 @@
 import React from 'react';
-import './agrega_pelicula.css';
 
-function agrega_pelicula() {
+function Agregar_pelicula() {
   return (
     <div className="container">
       <h1>Agregar película</h1>
@@ -28,4 +27,4 @@ function agrega_pelicula() {
   );
 }
 
-export default agrega_pelicula;
+export default Agregar_pelicula;

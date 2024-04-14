@@ -1,5 +1,8 @@
 import React from 'react';
-//import './Rentas.css';
+import { Link } from 'react-router-dom';
+import Ver_rentas from "./renta/ver_rentas";
+import Actualizar_renta from "./renta/actualizar_renta";
+import Agregar_renta from "./renta/agregar_renta";
 
 function Rentas() {
   return (
@@ -7,16 +10,16 @@ function Rentas() {
       <h1>Rentar</h1>
       <div className="buttons">
         <div className="button-group">
-          <button onClick={() => window.location.href='/rentas/ver_rentas'}>Ver todas las rentas</button>
+          <Link to="renta/ver_rentas"><button>Ver todas las rentas</button></Link>
         </div>
         <div className="button-group">
-          <button onClick={() => window.location.href='/rentas/actualizar_renta'}>Actualizar renta</button>
+          <Link to="renta/actualizar_renta"><button>Actualizar renta</button></Link>
         </div>
         <div className="button-group">
-          <button onClick={() => window.location.href='/rentas/agregar_renta'}>Agregar renta</button>
+          <Link to="renta/agregar_renta"><button>Agregar renta</button></Link>
         </div>
         <div className="button-group">
-          <button onClick={() => window.location.href='/'}>Regresar</button>
+          <Link to="/"><button>Regresar</button></Link>
         </div>
       </div>
     </div>

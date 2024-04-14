@@ -1,7 +1,6 @@
 import React from 'react';
-import './agregar_renta.css';
 
-function agregar_renta({ usuarios, peliculas }) {
+function Agregar_renta({ usuarios, peliculas }) {
   return (
     <div className="container">
       <h1>Agregar renta</h1>
@@ -34,4 +33,4 @@ function agregar_renta({ usuarios, peliculas }) {
   );
 }
 
-export default agregar_renta;
+export default Agregar_renta;

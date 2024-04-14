@@ -1,7 +1,6 @@
 import React from 'react';
-import './ver_peliculas.css';
 
-function ver_peliculas({ peliculas }) {
+function Ver_peliculas({ peliculas }) {
   return (
     <div className="container">
       <h1>Peliculas</h1>
@@ -33,4 +32,4 @@ function ver_peliculas({ peliculas }) {
   );
 }
 
-export default ver_peliculas;
+export default Ver_peliculas;

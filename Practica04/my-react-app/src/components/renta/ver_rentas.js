@@ -1,7 +1,6 @@
 import React from 'react';
-import './ver_rentas.css';
 
-function ver_rentas({ rentas }) {
+function Ver_rentas({ rentas }) {
   return (
     <div className="container">
       <h1>Rentas</h1>
@@ -35,4 +34,4 @@ function ver_rentas({ rentas }) {
   );
 }
 
-export default ver_rentas;
+export default Ver_rentas;

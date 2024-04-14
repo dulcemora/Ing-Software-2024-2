@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './agrega_cliente.css';
 
-function agrega_cliente() {
+function Agregar_cliente() {
   const [nombre, setNombre] = useState('');
   const [apPat, setApPat] = useState('');
   const [apMat, setApMat] = useState('');
@@ -66,4 +65,4 @@ function agrega_cliente() {
   );
 }
 
-export default agrega_cliente;
+export default Agregar_cliente;

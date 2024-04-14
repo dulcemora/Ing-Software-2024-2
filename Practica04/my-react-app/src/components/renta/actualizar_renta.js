@@ -1,7 +1,6 @@
 import React from 'react';
-import './ver_rentas.css';
 
-function actualizar_renta({ renta }) {
+function Actualizar_renta({ renta }) {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -29,4 +28,4 @@ function actualizar_renta({ renta }) {
   );
 }
 
-export default actualizar_renta;
+export default Actualizar_renta;

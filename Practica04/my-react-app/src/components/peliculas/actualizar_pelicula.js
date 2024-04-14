@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './actualizar_pelicula.css';
 
-function actualizar_pelicula() {
+function Actualizar_pelicula() {
   const [idPelicula, setIdPelicula] = useState('');
   const [campoActualizar, setCampoActualizar] = useState('nombre');
   const [nuevoValor, setNuevoValor] = useState('');
@@ -53,4 +52,4 @@ function actualizar_pelicula() {
   );
 }
 
-export default actualizar_pelicula;
+export default Actualizar_pelicula;

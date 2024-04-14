@@ -1,0 +1,20 @@
+.container {
+    text-align: center;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .button-group {
+    margin-bottom: 10px; /* Espacio entre los grupos de botones */
+  }
+  
+  .button-group button {
+    margin-right: 10px; /* Espacio entre los botones */
+    padding: 5px 10px; /* Ajuste del espacio interior del botón */
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }

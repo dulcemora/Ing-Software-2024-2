@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './actualizar_cliente.css';
 
-function actualizar_cliente() {
+function Actualizar_cliente() {
   const [idUsuario, setIdUsuario] = useState('');
   const [campoActualizar, setCampoActualizar] = useState('nombre');
   const [nuevoValor, setNuevoValor] = useState('');
@@ -54,4 +53,4 @@ function actualizar_cliente() {
   );
 }
 
-export default actualizar_cliente;
+export default Actualizar_cliente;

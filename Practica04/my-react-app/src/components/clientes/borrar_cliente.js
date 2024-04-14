@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './borrar_cliente.css';
 
-function borrar_cliente() {
+function Borrar_cliente() {
   const [idUsuario, setIdUsuario] = useState('');
 
   const handleIdUsuarioChange = (event) => {
@@ -30,4 +29,4 @@ function borrar_cliente() {
   );
 }
 
-export default borrar_cliente;
+export default Borrar_cliente;
