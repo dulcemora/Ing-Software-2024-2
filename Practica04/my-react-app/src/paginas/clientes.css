@@ -5,7 +5,7 @@
   min-width: 600px;
   border-radius: 10px;
   text-align: center;
-  border-bottom: 2px solid #2f8d46;
+  border-bottom: 2px solid blue;
 }
 
 /* Styling for clientes-nav component nav element anchor tag*/
@@ -15,7 +15,7 @@
   font-weight: bold;
 /*  text-transform: uppercase; */
   text-decoration: none;
-  color: #2f8d46;
+  color: darkgray;
 }
 
 /* Styling for clientes component course-nav div anchor tag */
@@ -31,16 +31,17 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  background-color: lightgreen;
+  background-color: lightblue;
 }
 
-/* Styling for the CRUD component main div */
-.ver_clientes,
-.agregar_cliente,
-.actualizar_cliente,
-.borrar_cliente {
+/* Styling for the CRUD component main div
+.Ver_clientes,
+.Agregar_cliente,
+.Actualizar_cliente,
+.Borrar_cliente {
   width: 50%;
-  height: 40%;
+  height: 80%;
   padding: 100px;
-  background-color: whitesmoke;
+  background-color: lightslategray;
 }
+*/

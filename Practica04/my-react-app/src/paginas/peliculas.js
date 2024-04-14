@@ -10,7 +10,7 @@ const Peliculas = () => {
                 <Link to="/peliculas/ver_peliculas">Ver peliculas</Link>
                 <Link to="/peliculas/agregar_pelicula">Agregar pelicula</Link>
                 <Link to="/peliculas/actualizar_pelicula">Actualizar pelicula</Link>
-                <Link to="/peliculas/actualizar_pelicula">Borrar pelicula</Link>
+                <Link to="/peliculas/borrar_pelicula">Borrar pelicula</Link>
                 <Link to="/">Regresar</Link>
             </div>
             <Outlet />

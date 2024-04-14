@@ -10,7 +10,7 @@ const Clientes = () => {
                 <Link to="/clientes/ver_clientes">Ver clientes</Link>
                 <Link to="/clientes/agregar_cliente">Agregar cliente</Link>
                 <Link to="/clientes/actualizar_cliente">Actualizar cliente</Link>
-                <Link to="/clientes/actualizar_cliente">Borrar cliente</Link>
+                <Link to="/clientes/borrar_cliente">Borrar cliente</Link>
                 <Link to="/">Regresar</Link>
             </div>
             <Outlet />

@@ -5,7 +5,7 @@
     min-width: 600px;
     border-radius: 10px;
     text-align: center;
-    border-bottom: 2px solid #2f8d46;
+    border-bottom: 2px solid blue;
 }
  
 /* Styling for rentas-nav component nav element anchor tag*/
@@ -15,7 +15,7 @@
     font-weight: bold;
 /*    text-transform: uppercase;*/
     text-decoration: none;
-    color: #2f8d46;
+    color: darkgrey;
 }
  
 /* Styling for rentas component course-nav div anchor tag */
@@ -31,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    background-color: lightgreen;
+    background-color: lightblue;
 }
  
 /* Styling for the CRU component main div */
@@ -41,5 +41,5 @@
     width: 50%;
     height: 40%;
     padding: 100px;
-    background-color: whitesmoke;
+    background-color: lightslategray;
 }
