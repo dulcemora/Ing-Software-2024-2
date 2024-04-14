@@ -1,20 +1,46 @@
-.container {
-    text-align: center;
-  }
-  
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  .button-group {
-    margin-bottom: 10px; /* Espacio entre los grupos de botones */
-  }
-  
-  .button-group button {
-    margin-right: 10px; /* Espacio entre los botones */
-    padding: 5px 10px; /* Ajuste del espacio interior del botón */
-  }
-  .buttons {
-    display: flex;
-    flex-direction: column;
-  }
+/* Styling for the peliculas component nav element */
+.peliculas-nav {
+  background: #f2f2f2;
+  height: 4vh;
+  min-width: 600px;
+  border-radius: 10px;
+  text-align: center;
+  border-bottom: 2px solid #2f8d46;
+}
+
+/* Styling for peliculas-nav component nav element anchor tag*/
+.peliculas-nav a {
+  padding: 20px 20px;
+  font-size: 26px;
+  font-weight: bold;
+/*  text-transform: uppercase;*/
+  text-decoration: none;
+  color: #2f8d46;
+}
+
+/* Styling for peliculas component course-nav div anchor tag */
+.peliculas-nav a {
+  color: rgb(59, 117, 241);
+}
+
+/* Styling for the peliculas component main div */
+.Peliculas {
+  width: 100%;
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: lightgreen;
+}
+
+/* Styling for the CRUD component main div */
+.ver_peliculas,
+.agregar_pelicula,
+.actualizar_pelicula,
+.borrar_pelicula {
+  width: 50%;
+  height: 40%;
+  padding: 100px;
+  background-color: whitesmoke;
+}

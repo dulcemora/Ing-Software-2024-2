@@ -1,7 +1,4 @@
-
-/* Filename: App.css */
-/* Styling for the App component nav element 
-and Course component course-nav div */
+/* Styling for the rentas component nav element */
 .rentas-nav {
     background: #f2f2f2;
     height: 4vh;
@@ -11,24 +8,22 @@ and Course component course-nav div */
     border-bottom: 2px solid #2f8d46;
 }
  
-/* Styling for App component nav element anchor 
-tag and Course component nav element anchor tag */
+/* Styling for rentas-nav component nav element anchor tag*/
 .rentas-nav a {
     padding: 20px 20px;
     font-size: 26px;
     font-weight: bold;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     text-decoration: none;
     color: #2f8d46;
 }
  
-/* Styling for Course component 
-course-nav div anchor tag */
+/* Styling for rentas component course-nav div anchor tag */
 .rentas-nav a {
     color: rgb(59, 117, 241);
 }
  
-/* Styling for the Home component main div */
+/* Styling for the Rentas component main div */
 .Rentas {
     width: 100%;
     height: 96vh;
@@ -39,7 +34,7 @@ course-nav div anchor tag */
     background-color: lightgreen;
 }
  
-/* Styling for the Search & List component main div */
+/* Styling for the CRU component main div */
 .ver_rentas,
 .agregar_renta,
 .actualizar_renta {
