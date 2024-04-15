@@ -38,7 +38,7 @@ function Agregar_cliente() {
 
   return (
     <div className="container">
-      <h1>Agregar usuario</h1>
+      <h1>Agregar cliente</h1>
       <div className="form-container">
         <form onSubmit={handleFormSubmit}>
           <label htmlFor="nombre">Ingrese el nombre:</label>

@@ -14,7 +14,7 @@ function Borrar_cliente() {
 
   return (
     <div className="container">
-      <h1>Borrar Usuario</h1>
+      <h1>Borrar cliente</h1>
       <div className="form-container">
         <form onSubmit={handleFormSubmit}>
           <label htmlFor="idUsuario">Ingrese el ID:</label>

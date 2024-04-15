@@ -26,7 +26,7 @@ function Actualizar_cliente() {
 
   return (
     <div className="container">
-      <h1>Actualizar Usuario</h1>
+      <h1>Actualizar cliente</h1>
       <div className="form-container">
         <form onSubmit={handleFormSubmit}>
           <label htmlFor="idUsuario">ID de Usuario:</label>
